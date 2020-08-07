@@ -37,3 +37,4 @@ console.log(typeof (set));
 
 person = null
 console.log(person);
+console.log(typeof (person));
