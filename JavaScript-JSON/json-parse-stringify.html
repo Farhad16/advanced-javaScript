@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+
+<body>
+
+    <h1>
+        JavaScript JSON Javascript Object Notation
+    </h1>
+    <script>
+        const person = {
+            name: "Farhad",
+            age: 26,
+            phone: "01758416616",
+            skills: {
+                javaSctipt: "ES6",
+                python: "django"
+            },
+            quizMarks: [13, 14, 15, 11]
+        }
+
+        const convertToJSON = JSON.stringify(person);
+        console.log(convertToJSON);
+
+        const fromJSON = JSON.parse(convertToJSON);
+        console.log(fromJSON);
+    </script>
+</body>
+
+</html>
