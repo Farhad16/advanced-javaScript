@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+</head>
+
+<body>
+    <h1>Inspect the page and see details about this keyword</h1>
+    <h3 onclick="this.innerText = 'You clicked me'">Click me to change the context</h3>
+    <input id="inputValue" type="text" placeholder="Number to get it's square"><span id="square"></span><br><br>
+    <button onclick="clickMe()">Click</button>
+    <script>
+        obj = {
+            name: "John sina",
+            getFullName: function () {
+                console.log(this);
+                return "Mr. " + this.name
+            }
+        }
+
+        console.log(obj.getFullName());
+
+        anotherObj = {
+            name: "The rock"
+        };
+
+        anotherObj.getFullName = obj.getFullName;
+        console.log(anotherObj.getFullName());
+
+        function clickMe() {
+            const inputValue = document.getElementById("inputValue").value;
+            const value = inputValue * inputValue;
+            const square = document.getElementById("square").innerText = value;
+            console.log(square);
+        }
+    </script>
+</body>
+
+</html>
