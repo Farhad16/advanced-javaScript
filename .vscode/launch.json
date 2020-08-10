@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\map-filter-find.js"
+            "program": "${file}"
         }
     ]
 }
